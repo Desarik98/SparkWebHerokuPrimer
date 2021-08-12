@@ -9,8 +9,7 @@
   <version>1.0-SNAPSHOT</version>
 
   <name>SparkWebApp</name>
-  <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
+
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -110,6 +109,17 @@
           <goals><goal>copy-dependencies</goal></goals>
         </execution>
       </executions>
+    </plugin>
+    <plugin>
+      <groupId>com.heroku.sdk</groupId>
+      <artifactId>heroku-maven-plugin</artifactId>
+      <version>3.0.4</version>
+      <configuration>
+        <appName>sparkwebform</appName>
+        <processTypes>
+          <web>java $JAVA_OPTS -cp target/classes:target/dependency/* edu.escuelaing.arep</web>
+        </processTypes>
+      </configuration>
     </plugin>
   </plugins>
   </build>

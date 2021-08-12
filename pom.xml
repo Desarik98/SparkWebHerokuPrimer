@@ -117,7 +117,7 @@
       <configuration>
         <appName>sparkwebform</appName>
         <processTypes>
-          <web>java $JAVA_OPTS -cp target/classes:target/dependency/* edu.escuelaing.arep</web>
+          <web>java $JAVA_OPTS -cp target/classes:target/dependency/* edu.escuelaing.arep.App</web>
         </processTypes>
       </configuration>
     </plugin>
